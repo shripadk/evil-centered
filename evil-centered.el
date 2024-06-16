@@ -44,14 +44,11 @@
   "C-d" #'evil-scroll-down-and-center
   "C-u" #'evil-scroll-up-and-center)
 
-(defgroup evil-centered-group nil "Evil centered group." :group 'emulations)
-
 ;;;###autoload
 (define-minor-mode evil-centered-mode
   "Integrating Vim-style pager like navigation."
   :global t
   :keymap evil-centered-mode-map
-  :group 'evil-centered-group
   (let ((prev-state evil-state))
     (evil-normal-state)
     (evil-change-state prev-state)))
