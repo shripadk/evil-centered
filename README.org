@@ -8,6 +8,6 @@ Vim-like centered navigation — Keeps screen centered while scrolling up/down.
 If using Doom Emacs, add the following code block to your =~/.doom.d/config.el= file:
 
 #+begin_src emacs-lisp
-(map! :map evil-motion-state-map "C-d" #'evil-scroll-down-and-center)
-(map! :map evil-motion-state-map "C-u" #'evil-scroll-up-and-center)
+(map! :map evil-motion-state-map "C-d" #'evil-centered-scroll-down)
+(map! :map evil-motion-state-map "C-u" #'evil-centered-scroll-up)
 #+end_src
