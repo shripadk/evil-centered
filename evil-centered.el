@@ -22,10 +22,10 @@
 (require 'evil)
 
 (defvar evil-centered-mode-map (make-sparse-keymap)
-  "evil-centered-mode's keymap")
+  "The evil-centered-mode's keymap.")
 
 (evil-define-command evil-scroll-down-and-center (count)
-  "scroll the window and the cursor count lines downwards and center it."
+  "Scroll the window and the cursor count lines downwards and center it."
   :repeat nil
   :keep-visual t
   (interactive "<c>")
@@ -33,7 +33,7 @@
   (evil-scroll-line-to-center count))
 
 (evil-define-command evil-scroll-up-and-center (count)
-  "scroll the window and the cursor count lines upwards and center it."
+  "Scroll the window and the cursor count lines upwards and center it."
   :repeat nil
   :keep-visual t
   (interactive "<c>")
@@ -41,12 +41,14 @@
   (evil-scroll-line-to-center count))
 
 (evil-define-key '(normal visual) evil-centered-mode-map
-  "C-d" 'evil-scroll-down-and-center
-  "C-u" 'evil-scroll-up-and-center)
+  "C-d" #'evil-scroll-down-and-center
+  "C-u" #'evil-scroll-up-and-center)
+
+(defgroup evil-centered-group nil "Evil centered group." :group 'emulations)
 
 ;;;###autoload
 (define-minor-mode evil-centered-mode
-  "Integrating Vim-style pager like navigation"
+  "Integrating Vim-style pager like navigation."
   :global t
   :keymap evil-centered-mode-map
   :group 'evil-centered-group
@@ -66,8 +68,7 @@
 
 ;;;###autoload
 (define-globalized-minor-mode evil-centered-mode-global
-  evil-centered-mode evil-centered-enable
-  :group 'evil-centered-group)
+  evil-centered-mode evil-centered-enable)
 
 (provide 'evil-centered)
 ;;; evil-centered.el ends here
