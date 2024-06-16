@@ -6,7 +6,7 @@
 ;; Maintainer: Shripad Krishna <shri@sizzle.run>
 ;; Created: June 16, 2024
 ;; Modified: June 16, 2024
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Keywords: abbrev convenience emulations
 ;; Homepage: https://github.com/shripadkrishna/evil-centered
 ;; Package-Requires: ((emacs "24.3"))
